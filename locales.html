@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>il pastaio · equipo</title>
+<style>
+  html,body{margin:0;height:100%;background:#1a1512;overflow:hidden}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+    var mv=document.createElement('meta');
+    mv.name='viewport';
+    mv.content='width=device-width, initial-scale=1, viewport-fit=cover';
+    document.head.appendChild(mv);
+
+    var id;
+    try{ id=localStorage.getItem('pastaio_dev_id'); if(!id){ id='D'+Date.now().toString(36)+Math.random().toString(36).slice(2,10); localStorage.setItem('pastaio_dev_id', id); } }
+    catch(e){ id='D-nostore'; }
+
+    var base='https://script.google.com/macros/s/AKfycbxBKtj3Gu8WaiwTj8ZHy4GNIrzBsZjrzzWtbTZaPWL4m3ZZdGqP2swgm0ELIg1arEOMww/exec';
+    var url=base+'?m=loc&dev='+encodeURIComponent(id);
+
+    var f=document.createElement('i'+'frame');
+    f.setAttribute('src', url);
+    f.setAttribute('allow','clipboard-read; clipboard-write; camera');
+    f.style.cssText='position:fixed;left:0;top:-46px;width:100%;height:calc(100% + 46px);border:0';
+    document.body.appendChild(f);
+  });
+</script>
+</head>
+<body></body>
+</html>
