@@ -150,6 +150,29 @@
     margin-top: 3px;
     letter-spacing: 0.03em;
   }
+  .plato-banner .pb-includes{
+    font-family:'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8a7554;
+    margin-top: 3px;
+  }
+  .plato-banner .pb-options{
+    margin-top: 8px;
+    text-align: left;
+    display: inline-block;
+  }
+  .plato-banner .pb-options div{
+    font-family:'Cinzel', serif;
+    font-size: 11.5px;
+    color: var(--ink);
+    padding: 2px 0;
+  }
+  .plato-banner .pb-options div::before{
+    content: "— ";
+    color: var(--wine);
+  }
 
   .slogan{
     text-align:center;
@@ -253,10 +276,17 @@
         <div class="tagline">Emilio Mitre 383 · Caballito</div>
       </header>
 
-      <!-- PLATO DEL DÍA — editar solo estas líneas para cambiarlo -->
+      <!-- PLATO DEL DÍA — editar solo este bloque para cambiarlo -->
       <div class="plato-banner">
         <div class="pb-tag">Plato del día</div>
         <div class="pb-price">$ 19.000</div>
+        <div class="pb-includes">Incluye bebida y café</div>
+        <div class="pb-options">
+          <div>Sorrentinos jamón y queso</div>
+          <div>Ensalata Caesar</div>
+          <div>Rigatoni all'Amatriciana</div>
+          <div>Gnocchi alla Bolognese</div>
+        </div>
       </div>
       <!-- fin plato del día -->
 
