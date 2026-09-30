@@ -17,7 +17,8 @@
     try{ id=localStorage.getItem('pastaio_dev_id'); if(!id){ id='D'+Date.now().toString(36)+Math.random().toString(36).slice(2,10); localStorage.setItem('pastaio_dev_id', id); } }
     catch(e){ id='D-nostore'; }
 
-    var base='https://script.google.com/macros/s/AKfycbxBKtj3Gu8WaiwTj8ZHy4GNIrzBsZjrzzWtbTZaPWL4m3ZZdGqP2swgm0ELIg1arEOMww/exec';
+    // il pastaio ahora es un LOCAL de Arena: el staff entra al sistema de Arena con el código PASTAIO01.
+    var base='https://script.google.com/macros/s/AKfycbwT4LzNr9XjETYiZ0ynYeVGGMVdHFtEhTek_2BY_6ifs4Pt9uEn0aoZVrhfDNJV-wyAfg/exec';
     var url=base+'?m=loc&dev='+encodeURIComponent(id);
 
     var f=document.createElement('i'+'frame');
