@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu in English — il pastaio</title>
+<meta name="description" content="il pastaio — Cucina Italiana. Full menu in English. Emilio Mitre 383, Caballito, Buenos Aires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#3a2314; --paper:#ece4d3; --card:#f6f0e2; --wine:#6b2a2a; --gold:#a8823f; --line:#d8c9a8; --muted:#8a7554; }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  html,body{ margin:0; padding:0; background:var(--paper); color:var(--ink);
+    font-family:'Space Mono', monospace; -webkit-font-smoothing:antialiased; }
+  body{ display:flex; justify-content:center; padding:32px 16px 70px; }
+  .card{ width:100%; max-width:640px; background:var(--card); border:1.5px solid rgba(120,90,40,0.3);
+    box-shadow:0 24px 48px -20px rgba(58,35,20,0.35); }
+  .inner{ padding:30px 26px 36px; }
+  .back{ display:inline-block; font-size:11px; letter-spacing:0.08em; color:var(--wine); text-decoration:none; margin-bottom:18px; }
+  h1{ font-family:'Cinzel',serif; font-weight:600; font-size:26px; letter-spacing:0.04em; margin:0 0 6px; text-align:center; }
+  .lead{ text-align:center; font-size:11px; color:var(--muted); line-height:1.6; margin:0 0 22px; }
+  .toc{ display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:0 0 8px; }
+  .toc a{ font-size:9.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--wine); text-decoration:none;
+    border:1px solid var(--wine); border-radius:20px; padding:5px 11px; }
+  h2{ font-family:'Cinzel',serif; font-weight:600; font-size:19px; letter-spacing:0.06em; color:var(--wine);
+    margin:34px 0 4px; padding-bottom:6px; border-bottom:1.5px solid var(--line); scroll-margin-top:16px;
+    display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+  h2 small{ font-family:'Space Mono',monospace; font-weight:400; font-size:10px; color:var(--muted); letter-spacing:0.06em; font-style:italic; text-transform:none; }
+  .item{ padding:11px 0; border-bottom:1.5px dashed var(--line); }
+  .item:last-child{ border-bottom:none; }
+  .row{ display:flex; align-items:baseline; gap:8px; }
+  .name{ font-family:'Cinzel',serif; font-weight:600; font-size:14.5px; letter-spacing:0.02em; }
+  .dots{ flex:1; border-bottom:1.5px dotted var(--line); transform:translateY(-3px); min-width:12px; }
+  .price{ font-weight:700; font-size:12.5px; color:var(--wine); white-space:nowrap; }
+  .desc{ margin:3px 0 0; font-size:11px; line-height:1.55; color:var(--muted); }
+  .star{ color:var(--wine); margin-right:6px; font-size:11px; }
+  .note{ margin-top:26px; font-size:10.5px; line-height:1.6; color:var(--muted); text-align:center; }
+  .legend{ margin-top:14px; font-size:10.5px; color:var(--muted); text-align:center; }
+  footer{ text-align:center; margin-top:26px; font-size:9px; letter-spacing:0.08em; color:#a89871; }
+</style>
+</head>
+<body>
+<div class="card"><div class="inner">
+  <a class="back" href="index.html">← il pastaio</a>
+  <h1>Menu</h1>
+  <p class="lead">Italian cuisine · Emilio Mitre 383, Caballito<br>All prices in Argentine pesos (ARS)</p>
+  <div class="toc">
+    <a href="#antipasti">Starters</a>
+    <a href="#insalate">Salads</a>
+    <a href="#risotto">Risotto</a>
+    <a href="#pasta-fatta-a-mano">Handmade pasta</a>
+    <a href="#pasta-secca">Dried pasta</a>
+    <a href="#secondi">Main courses</a>
+    <a href="#dolci">Desserts</a>
+    <a href="#caff-e-digestivi">Coffee & digestifs</a>
+    <a href="#birre">Beer</a>
+    <a href="#da-bere">Drinks</a>
+    <a href="#cocktails">Cocktails</a>
+    <a href="#vini">Wine</a>
+  </div>
+  <h2 id="antipasti">Antipasti<small>Starters</small></h2>
+  <div class="item"><div class="row"><span class="name">Bruschetta al Pomodoro</span><span class="dots"></span><span class="price">$13,500</span></div><p class="desc">Tomato, garlic, fresh basil and olive oil</p></div>
+  <div class="item"><div class="row"><span class="name">Bruschetta Prosciutto e Brie</span><span class="dots"></span><span class="price">$16,000</span></div><p class="desc">Dry-cured ham, brie cheese and honey</p></div>
+  <div class="item"><div class="row"><span class="name">Parmigiana di Melanzane</span><span class="dots"></span><span class="price">$14,000</span></div><p class="desc">Eggplant gratin with tomato and parmesan</p></div>
+  <div class="item"><div class="row"><span class="name">Peperonata Rustica</span><span class="dots"></span><span class="price">$13,500</span></div><p class="desc">Peperonata, country bread and stracciatella</p></div>
+  <div class="item"><div class="row"><span class="name">Burrata con Salsa Caponata</span><span class="dots"></span><span class="price">$18,000</span></div><p class="desc">Fresh burrata with eggplant caponata</p></div>
+  <div class="item"><div class="row"><span class="name">Focaccia Norcina</span><span class="dots"></span><span class="price">$18,000</span></div><p class="desc">Dry-cured ham, fior di latte, arugula and tomato</p></div>
+  <div class="item"><div class="row"><span class="name">Focaccia alla Felice</span><span class="dots"></span><span class="price">$18,000</span></div><p class="desc">Mortadella, arugula, pesto and stracciatella</p></div>
+  <div class="item"><div class="row"><span class="name"><span class="star">&#9670;</span>Polenta alla Piemontese</span><span class="dots"></span><span class="price">$15,000</span></div><p class="desc">Polenta sticks with bagna cauda sauce</p></div>
+  <div class="item"><div class="row"><span class="name">Provoleta</span><span class="dots"></span><span class="price">$17,000</span></div><p class="desc">Gratinéed provolone</p></div>
+  <h2 id="insalate">Insalate<small>Salads</small></h2>
+  <div class="item"><div class="row"><span class="name">Insalata Caesar</span><span class="dots"></span><span class="price">$21,500</span></div><p class="desc">Grilled chicken, parmesan, croutons and caesar dressing</p></div>
+  <div class="item"><div class="row"><span class="name">Insalata Dolce Vita</span><span class="dots"></span><span class="price">$26,000</span></div><p class="desc">Arugula, dry-cured ham, pears and parmesan</p></div>
+  <div class="item"><div class="row"><span class="name">Insalata Mediterranea</span><span class="dots"></span><span class="price">$22,500</span></div><p class="desc">Mixed greens, tomato, olives and feta cheese</p></div>
+  <h2 id="risotto">Risotto</h2>
+  <div class="item"><div class="row"><span class="name">Risotto ai Frutti di Mare</span><span class="dots"></span><span class="price">$27,500</span></div><p class="desc">Creamy risotto with seafood</p></div>
+  <div class="item"><div class="row"><span class="name">Risotto ai Funghi</span><span class="dots"></span><span class="price">$28,500</span></div><p class="desc">Creamy risotto with seasonal mushrooms</p></div>
+  <h2 id="pasta-fatta-a-mano">Pasta Fatta A Mano<small>Handmade pasta</small></h2>
+  <div class="item"><div class="row"><span class="name">Cappellacci di Zucca</span><span class="dots"></span><span class="price">$23,000</span></div><p class="desc">Filled with roasted pumpkin, mushroom cream and truffle oil</p></div>
+  <div class="item"><div class="row"><span class="name">Cavatelli di Campagna</span><span class="dots"></span><span class="price">$22,000</span></div><p class="desc">Cavatelli with house sauce</p></div>
+  <div class="item"><div class="row"><span class="name">Fetuccine al Pomodoro</span><span class="dots"></span><span class="price">$18,500</span></div><p class="desc">Fetuccine with fresh tomato sauce</p></div>
+  <div class="item"><div class="row"><span class="name">Gnocchi di Patata alla Bolognese</span><span class="dots"></span><span class="price">$19,000</span></div><p class="desc">Potato gnocchi with bolognese sauce</p></div>
+  <div class="item"><div class="row"><span class="name">Gnocchi di Barbabietola ai 4 Formaggi</span><span class="dots"></span><span class="price">$24,500</span></div><p class="desc">Beetroot gnocchi with four-cheese sauce</p></div>
+  <div class="item"><div class="row"><span class="name">Lasagne al Ragú</span><span class="dots"></span><span class="price">$27,000</span></div><p class="desc">Traditional lasagna with meat ragù</p></div>
+  <div class="item"><div class="row"><span class="name">Linguine al Nero di Seppia</span><span class="dots"></span><span class="price">$24,000</span></div><p class="desc">Black linguine with seafood</p></div>
+  <div class="item"><div class="row"><span class="name">Ravioli di Ossobuco</span><span class="dots"></span><span class="price">$26,000</span></div><p class="desc">Filled with braised ossobuco, sage butter</p></div>
+  <div class="item"><div class="row"><span class="name">Ravioli di Ricotta e Formaggio</span><span class="dots"></span><span class="price">$24,000</span></div><p class="desc">Filled with ricotta and cheese</p></div>
+  <div class="item"><div class="row"><span class="name">Sorrentino Prosciutto e Formaggio</span><span class="dots"></span><span class="price">$24,000</span></div><p class="desc">Filled with ham and cheese</p></div>
+  <div class="item"><div class="row"><span class="name"><span class="star">&#9670;</span>Tajarin con Polpette</span><span class="dots"></span><span class="price">$25,000</span></div><p class="desc">Tajarin in tuco sauce with homemade meatballs</p></div>
+  <div class="item"><div class="row"><span class="name">Tortelloni di Pollo e Spinaci</span><span class="dots"></span><span class="price">$26,000</span></div><p class="desc">Filled with chicken and spinach, roasted cherry tomatoes and fresh basil</p></div>
+  <div class="item"><div class="row"><span class="name">Trofie al Pesto</span><span class="dots"></span><span class="price">$20,600</span></div><p class="desc">Trofie with homemade Genovese pesto</p></div>
+  <h2 id="pasta-secca">Pasta Secca<small>Dried pasta</small></h2>
+  <div class="item"><div class="row"><span class="name">Rigatoni all'Amatriciana</span><span class="dots"></span><span class="price">$20,600</span></div><p class="desc">Pancetta, tomato and pecorino</p></div>
+  <div class="item"><div class="row"><span class="name">Penne alla Carbonara</span><span class="dots"></span><span class="price">$20,600</span></div><p class="desc">Pancetta, egg and pecorino</p></div>
+  <div class="item"><div class="row"><span class="name">Spaghetti alla Puttanesca</span><span class="dots"></span><span class="price">$20,600</span></div><p class="desc">Tomato, olives, capers and anchovies</p></div>
+  <h2 id="secondi">Secondi<small>Main courses</small></h2>
+  <div class="item"><div class="row"><span class="name">Filetto di Salmone</span><span class="dots"></span><span class="price">$32,000</span></div><p class="desc">Grilled salmon with seasonal side</p></div>
+  <div class="item"><div class="row"><span class="name"><span class="star">&#9670;</span>Involtini di Manzo in Umido</span><span class="dots"></span><span class="price">$27,000</span></div><p class="desc">Braised beef rolls</p></div>
+  <div class="item"><div class="row"><span class="name">Milanesa with Spaghetti and Cream</span><span class="dots"></span><span class="price">$24,000</span></div><p class="desc">Veal milanesa with spaghetti in cream sauce</p></div>
+  <div class="item"><div class="row"><span class="name">Ossobuco in Umido della Tradizione</span><span class="dots"></span><span class="price">$33,000</span></div><p class="desc">Traditional braised ossobuco</p></div>
+  <h2 id="dolci">Dolci<small>Desserts</small></h2>
+  <div class="item"><div class="row"><span class="name">Affogato</span><span class="dots"></span><span class="price">$11,500</span></div><p class="desc">Vanilla ice cream with hot espresso</p></div>
+  <div class="item"><div class="row"><span class="name">Cannoli Siciliani</span><span class="dots"></span><span class="price">$11,000</span></div><p class="desc">Cannoli filled with ricotta cream</p></div>
+  <div class="item"><div class="row"><span class="name">Fragole alla Panna</span><span class="dots"></span><span class="price">$10,500</span></div><p class="desc">Strawberries with cream</p></div>
+  <div class="item"><div class="row"><span class="name">Gelato</span><span class="dots"></span><span class="price">$9,500</span></div><p class="desc">Artisan ice cream</p></div>
+  <div class="item"><div class="row"><span class="name"><span class="star">&#9670;</span>Panna Cotta al Caffè</span><span class="dots"></span><span class="price">$12,000</span></div><p class="desc">Coffee panna cotta</p></div>
+  <div class="item"><div class="row"><span class="name"><span class="star">&#9670;</span>Panna Cotta con Frutti di Bosco</span><span class="dots"></span><span class="price">$12,000</span></div><p class="desc">Panna cotta with mixed berries</p></div>
+  <div class="item"><div class="row"><span class="name">Profitterol</span><span class="dots"></span><span class="price">$12,000</span></div><p class="desc">Cream-filled puffs coated in chocolate</p></div>
+  <div class="item"><div class="row"><span class="name">Tiramisú</span><span class="dots"></span><span class="price">$13,000</span></div><p class="desc">Classic house tiramisù</p></div>
+  <h2 id="caff-e-digestivi">Caffè E Digestivi<small>Coffee & digestifs</small></h2>
+  <div class="item"><div class="row"><span class="name">Espresso</span><span class="dots"></span><span class="price">$4,500</span></div></div>
+  <div class="item"><div class="row"><span class="name">Espresso Doppio</span><span class="dots"></span><span class="price">$5,900</span></div></div>
+  <div class="item"><div class="row"><span class="name">Macchiato</span><span class="dots"></span><span class="price">$4,500</span></div></div>
+  <div class="item"><div class="row"><span class="name">Americano</span><span class="dots"></span><span class="price">$5,200</span></div></div>
+  <div class="item"><div class="row"><span class="name">Cappuccino</span><span class="dots"></span><span class="price">$6,300</span></div></div>
+  <div class="item"><div class="row"><span class="name">Caffè Latte</span><span class="dots"></span><span class="price">$5,900</span></div></div>
+  <div class="item"><div class="row"><span class="name">Inti Tea</span><span class="dots"></span><span class="price">$5,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Limoncello</span><span class="dots"></span><span class="price">$9,500</span></div></div>
+  <div class="item"><div class="row"><span class="name">Amaretto di Saronno</span><span class="dots"></span><span class="price">$9,500</span></div></div>
+  <div class="item"><div class="row"><span class="name">Vecchio Amaro del Capo</span><span class="dots"></span><span class="price">$9,500</span></div></div>
+  <div class="item"><div class="row"><span class="name">Anís Shami</span><span class="dots"></span><span class="price">$8,500</span></div></div>
+  <h2 id="birre">Birre<small>Beer</small></h2>
+  <div class="item"><div class="row"><span class="name">Stella Artois</span><span class="dots"></span><span class="price">$6,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Peroni</span><span class="dots"></span><span class="price">$6,000</span></div></div>
+  <h2 id="da-bere">Da Bere<small>Drinks</small></h2>
+  <div class="item"><div class="row"><span class="name">7Up</span><span class="dots"></span><span class="price">$4,800</span></div></div>
+  <div class="item"><div class="row"><span class="name">7Up Free</span><span class="dots"></span><span class="price">$4,800</span></div></div>
+  <div class="item"><div class="row"><span class="name">Acqua Gasata</span><span class="dots"></span><span class="price">$4,400</span></div></div>
+  <div class="item"><div class="row"><span class="name">Acqua Naturale</span><span class="dots"></span><span class="price">$4,400</span></div></div>
+  <div class="item"><div class="row"><span class="name">Acqua Saporita</span><span class="dots"></span><span class="price">$4,500</span></div><p class="desc">Flavored</p></div>
+  <div class="item"><div class="row"><span class="name">Acqua di Sifone</span><span class="dots"></span><span class="price">$3,000</span></div><p class="desc">Soda siphon</p></div>
+  <div class="item"><div class="row"><span class="name">Pepsi</span><span class="dots"></span><span class="price">$4,800</span></div></div>
+  <div class="item"><div class="row"><span class="name">Pepsi Black</span><span class="dots"></span><span class="price">$4,800</span></div></div>
+  <div class="item"><div class="row"><span class="name">Lemonade</span><span class="dots"></span><span class="price">$6,500</span></div><p class="desc">Glass</p></div>
+  <div class="item"><div class="row"><span class="name">Lemonade Pitcher</span><span class="dots"></span><span class="price">$13,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Fresh Orange Juice</span><span class="dots"></span><span class="price">$6,500</span></div><p class="desc">Glass</p></div>
+  <h2 id="cocktails">Cocktails</h2>
+  <div class="item"><div class="row"><span class="name">Aperol Spritz</span><span class="dots"></span><span class="price">$11,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Negroni</span><span class="dots"></span><span class="price">$11,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Campari Orange</span><span class="dots"></span><span class="price">$11,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Gin Tonic</span><span class="dots"></span><span class="price">$11,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Fernet &amp; Coke</span><span class="dots"></span><span class="price">$11,000</span></div></div>
+  <h2 id="vini">Vini<small>Wine</small></h2>
+  <div class="item"><div class="row"><span class="name">Alaris Chardonnay</span><span class="dots"></span><span class="price">$14,500</span></div></div>
+  <div class="item"><div class="row"><span class="name">El Esteco Blanc de Noir</span><span class="dots"></span><span class="price">$22,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Fond de Cave Malbec</span><span class="dots"></span><span class="price">$14,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Don David Malbec</span><span class="dots"></span><span class="price">$14,500</span></div></div>
+  <div class="item"><div class="row"><span class="name">Trapiche Reserva Malbec</span><span class="dots"></span><span class="price">$15,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Fond de Cave Reserva Malbec</span><span class="dots"></span><span class="price">$17,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Trapiche Medalla Malbec</span><span class="dots"></span><span class="price">$36,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Bressia Profundo</span><span class="dots"></span><span class="price">$55,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Bressia Lágrima Canela</span><span class="dots"></span><span class="price">$68,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Bressia Piel Negra</span><span class="dots"></span><span class="price">$84,000</span></div></div>
+  <div class="item"><div class="row"><span class="name">Glass of Wine (Malbec)</span><span class="dots"></span><span class="price">$6,500</span></div></div>
+  <div class="item"><div class="row"><span class="name">Glass of Sparkling Wine</span><span class="dots"></span><span class="price">$7,500</span></div></div>
+  <div class="legend"><span class="star">&#9670;</span>House recommendation — Piedmontese cuisine</div>
+  <div class="note">Cover charge $3,000 per person.</div>
+  <footer>il pastaio · @ilpastaiocucinaitaliana</footer>
+</div></div>
+</body>
+</html>
