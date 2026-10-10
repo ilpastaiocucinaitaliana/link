@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>il pastaio</title>
+<meta name="description" content="il pastaio — Cucina Italiana. Emilio Mitre 383, Caballito.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#3a2314;
+    --paper:#ece4d3;
+    --card:#f6f0e2;
+    --wine:#6b2a2a;
+    --gold:#a8823f;
+    --line:#d8c9a8;
+  }
+  *{ box-sizing:border-box; }
+  html,body{
+    margin:0; padding:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family:'Space Mono', monospace;
+    -webkit-font-smoothing:antialiased;
+  }
+  body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding: 40px 18px 70px;
+  }
+  .card{
+    width:100%;
+    max-width: 400px;
+    background: var(--card);
+    border: 1.5px solid rgba(120,90,40,0.3);
+    box-shadow: 0 24px 48px -20px rgba(58,35,20,0.35);
+  }
+  .card-inner{
+    padding: 0 26px 30px;
+  }
+  .logo{
+    width:100%;
+    display:block;
+    border-bottom: 1.5px solid rgba(120,90,40,0.3);
+  }
+  header{
+    text-align:center;
+    padding: 20px 0 6px;
+  }
+  .tagline{
+    font-size: 10.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .eyebrow{
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8a7554;
+    padding: 22px 0 10px;
+    text-align:center;
+  }
+  nav{ display:flex; flex-direction:column; }
+
+  .link-row{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    padding: 15px 2px;
+    text-decoration:none;
+    color: var(--ink);
+    border-bottom: 1.5px dashed var(--line);
+    font-family: 'Cinzel', serif;
+  }
+  nav > *:last-child{ border-bottom:none; }
+
+  .link-icon{
+    width: 34px; height:34px;
+    flex: 0 0 auto;
+    border-radius:50%;
+    background: var(--paper);
+    display:flex; align-items:center; justify-content:center;
+    font-size:15px;
+    border: 1.5px solid var(--line);
+  }
+  .link-text{ flex:1; display:flex; flex-direction:column; }
+  .link-title{ font-weight:600; font-size:15px; letter-spacing:0.02em; }
+  .link-sub{
+    font-family:'Space Mono', monospace;
+    font-size:10px;
+    color:#8a7554;
+    margin-top:2px;
+    letter-spacing:0.02em;
+  }
+  .link-arrow{ color: var(--wine); font-size:16px; font-family:'Space Mono', monospace; }
+
+  .link-row.disabled{
+    opacity: 0.6;
+    cursor: default;
+  }
+  .badge-soon{
+    font-family:'Space Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color: var(--wine);
+    border: 1px solid var(--wine);
+    border-radius: 20px;
+    padding: 3px 8px;
+    flex: 0 0 auto;
+  }
+
+  footer{ text-align:center; margin-top:26px; }
+  footer p{
+    font-size:9px;
+    letter-spacing:0.08em;
+    color:#a89871;
+    margin:2px 0;
+  }
+
+  .plato-banner{
+    margin: 18px 0 6px;
+    text-align: center;
+    border: 1.5px solid var(--wine);
+    padding: 10px 12px;
+    background: repeating-linear-gradient(135deg, rgba(107,42,42,0.05) 0 10px, transparent 10px 20px);
+  }
+  .plato-banner .pb-tag{
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--wine);
+    font-weight: 700;
+  }
+  .plato-banner .pb-name{
+    font-family:'Cinzel', serif;
+    font-size: 13px;
+    color: var(--ink);
+    margin-top: 4px;
+  }
+  .plato-banner .pb-price{
+    font-family:'Space Mono', monospace;
+    font-size: 12px;
+    color: var(--wine);
+    margin-top: 3px;
+    letter-spacing: 0.03em;
+  }
+  .plato-banner .pb-includes{
+    font-family:'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #8a7554;
+    margin-top: 3px;
+  }
+  .plato-banner .pb-options{
+    margin-top: 8px;
+    text-align: left;
+    display: inline-block;
+  }
+  .plato-banner .pb-options div{
+    font-family:'Cinzel', serif;
+    font-size: 11.5px;
+    color: var(--ink);
+    padding: 2px 0;
+  }
+  .plato-banner .pb-options div::before{
+    content: "— ";
+    color: var(--wine);
+  }
+
+  .slogan{
+    text-align:center;
+    font-family:'Cinzel', serif;
+    font-style: italic;
+    font-size: 13.5px;
+    color: var(--wine);
+    padding: 10px 6px 4px;
+    line-height: 1.5;
+  }
+
+  .glossary{
+    margin-top: 6px;
+    border: 1.5px solid var(--line);
+  }
+  .glossary summary{
+    cursor: pointer;
+    padding: 13px 14px;
+    font-family:'Cinzel', serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    list-style:none;
+  }
+  .glossary summary::-webkit-details-marker{ display:none; }
+  .glossary summary::after{
+    content: "＋";
+    color: var(--wine);
+    font-size: 14px;
+  }
+  .glossary[open] summary::after{ content: "－"; }
+  .glossary summary .gloss-sub{
+    font-family:'Space Mono', monospace;
+    font-weight:400;
+    font-size: 9px;
+    letter-spacing:0.06em;
+    color:#8a7554;
+    display:block;
+    margin-top:2px;
+  }
+  .gloss-body{
+    padding: 4px 14px 16px;
+    border-top: 1.5px dashed var(--line);
+  }
+  .gloss-cat{
+    font-family:'Space Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color: var(--gold);
+    padding: 12px 0 6px;
+  }
+  .gloss-item{
+    padding: 5px 0;
+  }
+  .gloss-item .gname{
+    font-family:'Cinzel', serif;
+    font-weight:600;
+    font-size: 12.5px;
+    color: var(--ink);
+  }
+  .gloss-item .gmean{
+    display:block;
+    font-family:'Space Mono', monospace;
+    font-size: 9.5px;
+    color:#8a7554;
+    margin-top: 1px;
+    line-height:1.4;
+  }
+  .gallery{
+    margin-top: 18px;
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+  }
+  .gallery img{
+    width:100%;
+    display:block;
+    border: 1.5px solid rgba(120,90,40,0.3);
+  }
+  .gallery-cap{
+    text-align:center;
+    font-family:'Space Mono', monospace;
+    font-size: 9px;
+    letter-spacing:0.08em;
+    color:#8a7554;
+    margin-top:-4px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <img class="logo" src="logo-v2.jpg" alt="il pastaio — Cucina Italiana">
+
+    <div class="card-inner">
+      <header>
+        <div class="tagline">Emilio Mitre 383 · Caballito</div>
+      </header>
+
+      <!-- PLATO DEL DÍA — editar solo este bloque para cambiarlo -->
+      <div class="plato-banner">
+        <div class="pb-tag">Plato del día</div>
+        <div class="pb-price">$ 19.000</div>
+        <div class="pb-includes">Incluye bebida y café</div>
+        <div class="pb-includes">Lunes a viernes de 12 a 16 hs</div>
+        <div class="pb-options">
+          <div>Sorrentinos jamón y queso</div>
+          <div>Ensalata Caesar</div>
+          <div>Rigatoni all'Amatriciana</div>
+          <div>Gnocchi alla Bolognese</div>
+        </div>
+      </div>
+      <!-- fin plato del día -->
+
+      <div class="slogan">"Artesanalmente imperfecta."</div>
+
+      <div class="eyebrow">Visitanos</div>
+      <nav>
+        <a class="link-row" href="menu.html">
+          <span class="link-icon">🍝</span>
+          <span class="link-text">
+            <span class="link-title">Menú</span>
+            <span class="link-sub">Ver la carta completa</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a class="link-row" href="https://wa.me/5491122806075" target="_blank" rel="noopener">
+          <span class="link-icon">↳</span>
+          <span class="link-text">
+            <span class="link-title">WhatsApp</span>
+            <span class="link-sub">11 2280-6075</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a class="link-row" href="mailto:info@ilpastaio.ar">
+          <span class="link-icon">✉</span>
+          <span class="link-text">
+            <span class="link-title">Escribinos</span>
+            <span class="link-sub">info@ilpastaio.ar</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a class="link-row" href="mailto:reservas@ilpastaio.ar">
+          <span class="link-icon">📅</span>
+          <span class="link-text">
+            <span class="link-title">Reservas</span>
+            <span class="link-sub">reservas@ilpastaio.ar</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a class="link-row" href="https://instagram.com/ilpastaiocucinaitaliana" target="_blank" rel="noopener">
+          <span class="link-icon">✷</span>
+          <span class="link-text">
+            <span class="link-title">Instagram</span>
+            <span class="link-sub">@ilpastaiocucinaitaliana</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a class="link-row" href="https://www.google.com/maps/search/?api=1&query=Emilio+Mitre+383+Caballito+Buenos+Aires" target="_blank" rel="noopener">
+          <span class="link-icon">⚲</span>
+          <span class="link-text">
+            <span class="link-title">Cómo llegar</span>
+            <span class="link-sub">Ver en Google Maps</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+
+        <a class="link-row" href="https://search.google.com/local/writereview?placeid=ChIJ8_7sUoPLvJURjrQJCU4dBWU" target="_blank" rel="noopener">
+          <span class="link-icon">★</span>
+          <span class="link-text">
+            <span class="link-title">Dejanos tu reseña</span>
+            <span class="link-sub">Contanos tu experiencia en Google</span>
+          </span>
+          <span class="link-arrow">→</span>
+        </a>
+      </nav>
+
+      <details class="glossary">
+        <summary>
+          Glosario de la pasta
+          <span class="gloss-sub">De dónde viene cada nombre</span>
+        </summary>
+        <div class="gloss-body">
+
+          <div class="gloss-cat">Pastas largas</div>
+          <div class="gloss-item"><span class="gname">Spaghetti</span><span class="gmean">del it. spago — "pequeños cordeles"</span></div>
+          <div class="gloss-item"><span class="gname">Linguine</span><span class="gmean">del it. lingua — "lengüitas"</span></div>
+          <div class="gloss-item"><span class="gname">Tagliatelle</span><span class="gmean">del it. tagliare — "cortar"</span></div>
+          <div class="gloss-item"><span class="gname">Pappardelle</span><span class="gmean">del it. pappare — "comer con gusto"</span></div>
+          <div class="gloss-item"><span class="gname">Fettuccine</span><span class="gmean">del it. fettuccia — "cintita"</span></div>
+
+          <div class="gloss-cat">Pastas cortas</div>
+          <div class="gloss-item"><span class="gname">Penne</span><span class="gmean">del it. penna — pluma de escribir</span></div>
+          <div class="gloss-item"><span class="gname">Rigatoni</span><span class="gmean">del it. rigato — rayado o estriado</span></div>
+          <div class="gloss-item"><span class="gname">Tortiglioni</span><span class="gmean">del it. tortigliare — torcer</span></div>
+          <div class="gloss-item"><span class="gname">Maccheroni</span><span class="gmean">origen incierto (griego/napolitano)</span></div>
+          <div class="gloss-item"><span class="gname">Ziti</span><span class="gmean">del it. zita — novia</span></div>
+
+          <div class="gloss-cat">Pastas en espiral</div>
+          <div class="gloss-item"><span class="gname">Fusilli</span><span class="gmean">del it. fuso — el huso de hilar</span></div>
+          <div class="gloss-item"><span class="gname">Gemelli</span><span class="gmean">del it. gemello — gemelos</span></div>
+          <div class="gloss-item"><span class="gname">Rotini</span><span class="gmean">del it. ruota — pequeñas ruedas</span></div>
+
+          <div class="gloss-cat">Formas especiales</div>
+          <div class="gloss-item"><span class="gname">Farfalle</span><span class="gmean">del it. farfalla — mariposa</span></div>
+          <div class="gloss-item"><span class="gname">Orecchiette</span><span class="gmean">del it. orecchia — orejitas</span></div>
+          <div class="gloss-item"><span class="gname">Conchiglie</span><span class="gmean">del it. conchiglia — concha marina</span></div>
+          <div class="gloss-item"><span class="gname">Radiatori</span><span class="gmean">recuerda los radiadores de hierro</span></div>
+          <div class="gloss-item"><span class="gname">Stelline</span><span class="gmean">del it. stella — estrellitas</span></div>
+          <div class="gloss-item"><span class="gname">Ditalini</span><span class="gmean">del it. ditale — dedal</span></div>
+
+          <div class="gloss-cat">Pastas rellenas</div>
+          <div class="gloss-item"><span class="gname">Ravioli</span><span class="gmean">de ravvolgere — envolver</span></div>
+          <div class="gloss-item"><span class="gname">Tortellini</span><span class="gmean">del it. tortello, inspirado en un ombligo</span></div>
+          <div class="gloss-item"><span class="gname">Tortelloni</span><span class="gmean">como el tortellini, más grande</span></div>
+          <div class="gloss-item"><span class="gname">Cappelletti</span><span class="gmean">del it. cappello — sombreritos</span></div>
+          <div class="gloss-item"><span class="gname">Agnolotti</span><span class="gmean">origen piamontés, de Angelo</span></div>
+          <div class="gloss-item"><span class="gname">Culurgiones</span><span class="gmean">del sardo — "pequeño paquete"</span></div>
+
+          <div class="gloss-cat">Ñoquis, lasaña y canelones</div>
+          <div class="gloss-item"><span class="gname">Gnocchi</span><span class="gmean">del it. nocchio — nudo o nudillo</span></div>
+          <div class="gloss-item"><span class="gname">Lasagne</span><span class="gmean">del griego lasanon — recipiente</span></div>
+          <div class="gloss-item"><span class="gname">Cannelloni</span><span class="gmean">del it. cannello — tubo pequeño</span></div>
+
+        </div>
+      </details>
+
+      <div class="gallery">
+        <img src="pasta-variedad.jpg" alt="Variedad de pasta fresca hecha a mano">
+        <div class="gallery-cap">Pasta fresca, hecha a mano</div>
+        <img src="hombre-pasta-bn.jpg" alt="Disfrutando un plato de pasta">
+        <div class="gallery-cap">Así se disfruta en il pastaio</div>
+      </div>
+
+      <footer>
+        <p>Cucina Italiana</p>
+        <p>Buenos Aires, Argentina</p>
+      </footer>
+    </div>
+  </div>
+
+</body>
+</html>
